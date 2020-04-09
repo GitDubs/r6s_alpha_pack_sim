@@ -1,9 +1,6 @@
 #===============================================================================
 # GitDubs
 # 9 April 2020
-# Disclaimer: I wrote this according to my own understanding of the alpha pack
-# system as of 04/09/2020, I am not a dev I was just bored, if you see some kind
-# of issue with how it is working, write a better one I'm sure it's possible
 #===============================================================================
 
 import random
