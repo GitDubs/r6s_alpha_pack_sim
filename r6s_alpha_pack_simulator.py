@@ -7,20 +7,23 @@ import random
 
 #Simulates how many games until an alpha pack roll hits
 def simulate_alpha_pack_roll():
-    #Assume one win out of every 3 games (1.5 + 1.5 + 2.0 = 5.0) 
-    percentage_adder = 5.0
+    #Assume one win out of every 3 games (1.5 + 1.5 + 2.0 = 5.0)
+    games_per_win = 1
+    percentage_adder = (1.5 * (games_per_win -1)) + 2.0
 
+    
     #Always start with 5.0 because that is percent awarded on a win
     #after a successful alpha pack roll + the two games lost
-    chance_to_hit = 5.0
+    chance_to_hit = percentage_adder
 
+    
     hit = False
     count = 0
     while not hit:
         roll = random.uniform(0, 100)
         hit = chance_to_hit >= roll
         chance_to_hit += percentage_adder
-        count += 3
+        count += games_per_win
     return count
 
 highest_count = 0
